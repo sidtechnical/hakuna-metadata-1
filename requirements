@@ -1,0 +1,11 @@
+sudo apt-get install python-pip
+sudo pip install pandas
+sudo pip install nltk
+sudo pip install plotly
+sudo pip install beautifulsoup4
+sudo pip install requests
+sudo pip install tldextract
+sudo pip install wordcloud
+python -m nltk.downloader 'stopwords'
+python -m nltk.downloader 'punkt'
+

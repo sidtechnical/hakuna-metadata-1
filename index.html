@@ -1,0 +1,80 @@
+<html>
+
+<title>Hakuna Metadata - Browsing history</title>
+<head>
+   <!-- styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/demo.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+     <!-- Add IntroJs styles -->
+    <link href="assets/css/introjs.css" rel="stylesheet">
+
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container-narrow">
+<div class="jumbotron">
+  <h2>Hakuna Metadata</h2>
+  <h3 class="lead">Browsing history visualization</h3>
+  <h4>Explore more about your browsing history.</h4>
+</div>
+
+<p> <i><u>P.S</u>: This tool works only if you store your browsing history and only if you have browsed Facebook, Google or Twitter.</i></p>
+
+<p>While you are browsing, if the content of the websites that you visit is the "data", then your browsing history is your "metadata". This simple tool build some visualizations based on that metadata to explain the hidden power in it.</p>
+
+<p><font color="red"><b>Note that, most of the following visualizations are interactive. You can zoom-in, zoom-out or click different parts of it to understand the graphs better.</b></font></p>
+
+
+<ul>
+ <li> <b>Overall stats about the browsing history:</b> <br/>
+Here is snapshot of what you have browsed the most, in terms of most visited domain names and suffixes.
+<ul><li><a href="assets/pages/stats.html" target="_blank">Browsing history stats.</a></li></ul>
+</li>
+<li> <b>Browsing patterns:</b><br/>
+  Your browsing pattern can be seen in two forms. One as the anomalies - which gives an understanding of peaks in your usage, and the  other as heatmap, which gives a snapshot of the lifestyle in an easily
+understandable manner.
+  <ul> 
+    <li> <a href="assets/pages/wordcount_plot.html" target="_blank">Browsing anamolies - Unique URLs visited over time</a> </li>
+    <li> <a href="assets/pages/browspattern_heatmap.html" target="_blank">Heatmap of the browsing pattern</a></li>
+  </ul>
+</li>
+<li> <b>Potential adwords:</b> <br/>
+  Here is the list of potential adwords genrated in two different ways. First, by crawling the most visited websited, followed by performing a simple Named-Entity Recognition. Second, by displaying your most searched keywords on Google.
+    <ul>
+      <li> <a href="assets/pages/images.html" target="_blank">Worldcloud from the crawled text </a></li>
+      <li> <a href="assets/pages/word_plot.html" target="_blank">Frequently queried google search keywords</a></li>
+    </ul>
+</li>
+<li> <b>Psuedo social sphere: </b> <br/>
+    <!-- <p>The browsing history contains the websites just YOU have visited; which means it is 1-dimensional. However, by the number of times your visit a website, it is possible to understand your inclination towards that website. Imagine, if this logic is applied to the socail networks that you visit, the browsing history reveals your social circles - which makes it 2-dimensional now! </p> -->
+
+    <p>Since every profile you visit in Facebook or Twitter is identified by unique URLs, the following graphs try to present them as a psuedo-social graph. Your browsing history (URLs) pertaining to Facebook or Twitter are first grouped by the number of times you have visited them (visit count), and then by Frecency, an indicator of frequency + recency. </p> 
+
+    <p>In the links below to the graphs, start by clicking on the cicrles which are tagged with largest numbers and does not contain any other circles inside. These are probably your partners, family members or close friends. Now, try exploring those circles which contains several inner circles. You will probably notice people from different social circles (such as work place, school friends, role models, etc..) grouped together. This means even though they may not be connected directly with each other, you have similar amount of interest in them.</p>
+
+    <ul>
+      <li><a href="assets/pages/facebook.html" target="_blank"><b>Social sphere - Facebook.</b></a></li>
+      <li><a href="assets/pages/twitter.html" target="_blank"><b>Social sphere - Twitter.</b></a></li>
+    </ul>
+    <br/>
+</li>
+</ul>
+<p>This tool is built to be used by complete tech novices. We just parsed the URLs in the browsing history to fetch the names of the people whose profile you have visited. You might notice some numbers instead than names for the same reason in the psuedo-social spheres. </p>
+
+<p>If you have any issues or suggestion, please send an email to <b>sidtechnical@gmail.com</b>.</p>
+
+
+<div class="masthead">
+       <img border="1" style="height: 110px; width: 25%;"class="nav nav-pills pull-right" src="assets/img/edri_logo_WEB.png">
+        <br>
+        <h3 class="muted">European Digital Rights</h3>
+</div>
+</div>
+</body>
+</html> 
+
+
+
