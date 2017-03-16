@@ -11,12 +11,14 @@ Browsing  history visualization for Linux + Firefox combo.
 
 # Screenshots of working example
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_heatmap.gif?raw=true  "Browsing Pattern HeatMap")
+![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_heatmap.gif?raw=true  "Browsing Pattern HeatMap")  
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_anamoly.gif?raw=true  "Browsing Pattern Anamoly")
+![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_anamoly.gif?raw=true  "Browsing Pattern Anamoly")  
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_search.gif?raw=true  "Browsing Pattern Search Keywords")
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_heatmap.gif?raw=true  "Browsing Pattern HeatMap")
+![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_search.gif?raw=true  "Search Keywords")  
+
+
+![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_soccirc.gif?raw=true  "Psuedo Social Circles")
 
 
