@@ -11,6 +11,6 @@ Browsing  history visualization for Linux + Firefox combo.
 
 # Screenshots of working example
 
-![Browsing Pattern HeatMap](https://github.com/ "Browsing Pattern HeatMap")
+![Browsing Pattern HeatMap](https://github.com/sidtechnical/hakuna-metadata-1/blob/master/bh_heatmap.gif?raw=true  "Browsing Pattern HeatMap")
 
 
