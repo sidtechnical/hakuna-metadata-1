@@ -16,19 +16,19 @@ Browsing  history visualization for Linux + Firefox combo.
     <em>Browsing Pattern HeatMap</em>
 </p>
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/sidtechnical.github.io/blob/master/assets/images/bh_anamoly.gif?raw=true  "Browsing Pattern Anamoly") 
+![Browsing Pattern Anamoly](https://github.com/sidtechnical/sidtechnical.github.io/blob/master/assets/images/bh_anamoly.gif?raw=true  "Browsing Pattern Anamoly") 
 <p align="center">
     <em>Browsing Pattern Anamoly</em>
 </p>
 
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/sidtechnical.github.io/blob/master/assets/images/bh_search.gif?raw=true  "Search Keywords")  
+![Search Keywords](https://github.com/sidtechnical/sidtechnical.github.io/blob/master/assets/images/bh_search.gif?raw=true  "Search Keywords")  
 <p align="center">
     <em>Search Keywords</em>
 </p>
 
 
-![Browsing Pattern HeatMap](https://github.com/sidtechnical/sidtechnical.github.io/blob/master/assets/images/bh_soccirc.gif?raw=true  "Psuedo Social Circles")
+![Psuedo Social Circles](https://github.com/sidtechnical/sidtechnical.github.io/blob/master/assets/images/bh_soccirc.gif?raw=true  "Psuedo Social Circles")
 <p align="center">
     <em>Psuedo Social Circles</em>
 </p>
