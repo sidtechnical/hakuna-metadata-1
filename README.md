@@ -9,3 +9,8 @@ Browsing  history visualization for Linux + Firefox combo.
 - In the terminal, type **python tool.py** and press Enter.
 - Be patient, it might take a while. Once the program execution is done, it automatically opens up a web browser tab and displays the visualization.
 
+# Screenshots of working example
+
+![Browsing Pattern HeatMap](https://github.com/ "Browsing Pattern HeatMap")
+
+
