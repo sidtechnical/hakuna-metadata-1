@@ -1,5 +1,5 @@
 sudo apt-get install python-pip
-sudo pip install pandas
+sudo pip install pandas==0.18.1
 sudo pip install nltk
 sudo pip install plotly
 sudo pip install beautifulsoup4
