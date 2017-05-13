@@ -1,11 +1,11 @@
 sudo apt-get install python-pip
 sudo pip install pandas==0.18.1
-sudo pip install nltk
-sudo pip install plotly
-sudo pip install beautifulsoup4
-sudo pip install requests
-sudo pip install tldextract
-sudo pip install wordcloud
+sudo pip install nltk==3.2.2
+sudo pip install plotly==1.13.0
+sudo pip install beautifulsoup4==4.4.1
+sudo pip install requests==2.13.0
+sudo pip install tldextract==1.5.1
+sudo pip install wordcloud==1.2.1
 python -m nltk.downloader 'stopwords'
 python -m nltk.downloader 'punkt'
 
