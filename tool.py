@@ -150,7 +150,7 @@ def twitter_name_extractor(URL, Name):
 				return URL.split("https://www.twitter.com/",1)[1] #real_name
 			else:
 				return real_name #URL.split("https://www.twitter.com/",1)[1]
-	except AttributeError:
+	except:
 		return URL.split("https://www.twitter.com/",1)[1]
 
 ########################### Twitter functions ends ##############################################
