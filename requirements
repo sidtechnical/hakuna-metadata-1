@@ -1,4 +1,5 @@
 sudo apt-get install python-pip
+sudo apt-get install python-tk
 sudo pip install pandas==0.18.1
 sudo pip install nltk==3.2.2
 sudo pip install plotly==1.13.0
