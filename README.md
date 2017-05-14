@@ -6,6 +6,7 @@ P.S: Read the [blog post](http://www.privacypies.org/blog/metadata/2017/02/28/ha
 
 
 ## Install instructions
+- Install python-pip with the packetmanager of your linux distribution
 - Download and unzip this repository.
 - In the unzipped folder on your computer, right click on an empty space and select "Open in terminal" option.
 - In the terminal, type **sh requirements** and press Enter.
