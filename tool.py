@@ -338,33 +338,33 @@ if __name__ == "__main__":
 	#Copy only the "profile" URLs to a new dataframe
 	facebook_profile_df = facebook_df.loc[facebook_df['category_tags']=='profile']
 
-	#Remove duplicates and copy to a new dataframe
-	facebook_profile_clean =facebook_profile_df.drop_duplicates(['url_location'])
-
+	if len(facebook_profile_df) == 0:
+		print "\nno facebook profile data found"
+	else:
+		#Remove duplicates and copy to a new dataframe
+		facebook_profile_clean =facebook_profile_df.drop_duplicates(['url_location'])
 	
-	sorted_facebook_profile_clean = facebook_profile_clean.sort_values(['visit_count', 'frecency'], ascending=[False, False])
+		sorted_facebook_profile_clean = facebook_profile_clean.sort_values(['visit_count', 'frecency'], ascending=[False, False])
 
-	current_user = sorted_facebook_profile_clean ['name'].iloc[0]
-	current_user_url =  sorted_facebook_profile_clean ['url_location'].iloc[0]
+		current_user = sorted_facebook_profile_clean ['name'].iloc[0]
+		current_user_url =  sorted_facebook_profile_clean ['url_location'].iloc[0]
 
+		facebook_profile_clean_without_current_user = sorted_facebook_profile_clean[~sorted_facebook_profile_clean.url_location.str.contains(current_user_url)]
+
+		pd.options.mode.chained_assignment = None
+		facebook_profile_clean_without_current_user['url_location']= facebook_profile_clean_without_current_user.apply(lambda row: url_cleanup(row['url_location']), axis=1)
+
+		pd.options.mode.chained_assignment = None
+		facebook_profile_clean_without_current_user['real_name']= facebook_profile_clean_without_current_user.apply(lambda row: name_extractor(row['url_location'], row['name']), axis=1)
+
+		Facebook_Profile_list = facebook_profile_clean_without_current_user.drop_duplicates(['url_location'])
+
+		Facebook_Profile_list_Final = Facebook_Profile_list[['real_name','url_location', 'visit_count','frecency']]
+
+		facebook_json = create_json_for_circle_packing("Facebook", Facebook_Profile_list_Final.nlargest(100, 'visit_count'))
 	
-
-	facebook_profile_clean_without_current_user = sorted_facebook_profile_clean[~sorted_facebook_profile_clean.url_location.str.contains(current_user_url)]
-
-	pd.options.mode.chained_assignment = None
-	facebook_profile_clean_without_current_user['url_location']= facebook_profile_clean_without_current_user.apply(lambda row: url_cleanup(row['url_location']), axis=1)
-
-	pd.options.mode.chained_assignment = None
-	facebook_profile_clean_without_current_user['real_name']= facebook_profile_clean_without_current_user.apply(lambda row: name_extractor(row['url_location'], row['name']), axis=1)
-
-	Facebook_Profile_list = facebook_profile_clean_without_current_user.drop_duplicates(['url_location'])
-
-	Facebook_Profile_list_Final = Facebook_Profile_list[['real_name','url_location', 'visit_count','frecency']]
-
-	facebook_json = create_json_for_circle_packing("Facebook", Facebook_Profile_list_Final.nlargest(100, 'visit_count'))
-	
-	with open('assets/pages/facebook_profiles.json', 'w') as outfile:
-		json.dump(facebook_json, outfile)
+		with open('assets/pages/facebook_profiles.json', 'w') as outfile:
+			json.dump(facebook_json, outfile)
 
 	######################## End of Facebook related script ###################################################
 
@@ -376,25 +376,28 @@ if __name__ == "__main__":
 	twitter_pattern = '|'.join(map(re.escape, twitter_stop_words))
 	twitter_df = twitter_df[~twitter_df.url_location.str.contains(twitter_pattern)]
 
-	twitter_df['url_location']= twitter_df.apply(lambda row: twitter_url_cleanup(row['url_location']), axis=1)
-	twitter_df = twitter_df[twitter_df.url_location.notnull()]
-	twitter_df2 = twitter_df.drop_duplicates(['url_location'])
+	if len(twitter_df) == 0:
+		print "\nno twitter profile data found"
+	else:
+		twitter_df['url_location']= twitter_df.apply(lambda row: twitter_url_cleanup(row['url_location']), axis=1)
+		twitter_df= twitter_df[twitter_df.url_location.notnull()]
+		twitter_df2 = twitter_df.drop_duplicates(['url_location'])
 
-	sorted_twitter_df = twitter_df2.sort_values(['visit_count', 'frecency'], ascending=[False, False])
+		sorted_twitter_df = twitter_df2.sort_values(['visit_count', 'frecency'], ascending=[False, False])
 
-	current_user_twitter = sorted_twitter_df['name'].iloc[0]
-	current_user_url_twitter =  sorted_twitter_df['url_location'].iloc[0]
+		current_user_twitter = sorted_twitter_df['name'].iloc[0]
+		current_user_url_twitter =  sorted_twitter_df['url_location'].iloc[0]
 	
-	twitter_df_without_current_user = sorted_twitter_df[~sorted_twitter_df.url_location.str.contains(current_user_url_twitter)]
+		twitter_df_without_current_user = sorted_twitter_df[~sorted_twitter_df.url_location.str.contains(current_user_url_twitter)]
 
-	pd.options.mode.chained_assignment = None
-	twitter_df_without_current_user['real_name']= twitter_df_without_current_user.apply(lambda row: twitter_name_extractor(row['url_location'], row['name']), axis=1)
-	Twitter_Profile_Final = twitter_df_without_current_user[['real_name','url_location', 'visit_count','frecency']]
+		pd.options.mode.chained_assignment = None
+		twitter_df_without_current_user['real_name']= twitter_df_without_current_user.apply(lambda row: twitter_name_extractor(row['url_location'], row['name']), axis=1)
+		Twitter_Profile_Final = twitter_df_without_current_user[['real_name','url_location', 'visit_count','frecency']]
 
-	twitter_json = create_json_for_circle_packing("Twitter", Twitter_Profile_Final.nlargest(100, 'visit_count'))
+		twitter_json = create_json_for_circle_packing("Twitter", Twitter_Profile_Final.nlargest(100, 'visit_count'))
 
-	with open('assets/pages/twitter_profiles.json', 'w') as outfile:
-		json.dump(twitter_json, outfile)
+		with open('assets/pages/twitter_profiles.json', 'w') as outfile:
+			json.dump(twitter_json, outfile)
 
 	#################### End of Twitter related script ###################################################
 
