@@ -50,3 +50,6 @@ P.S: Read the [blog post](http://www.privacypies.org/blog/metadata/2017/02/28/ha
     <em>Psuedo Social Circles</em>
 </p>
 
+## To-Do
+- Support for Windows and Chrome (or any other browser)
+- Improve the psuedo-social sphere by grouping by range rather than absolute value.
