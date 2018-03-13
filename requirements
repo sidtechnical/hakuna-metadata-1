@@ -7,6 +7,8 @@ sudo pip install beautifulsoup4==4.4.1
 sudo pip install requests==2.13.0
 sudo pip install tldextract==1.5.1
 sudo pip install wordcloud==1.2.1
+sudo pip install pillow
 python -m nltk.downloader 'stopwords'
 python -m nltk.downloader 'punkt'
+
 
