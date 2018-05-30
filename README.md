@@ -2,7 +2,7 @@
 
 Browsing  history visualization for (Linux or Apple) + Firefox combo.
 
-P.S: Read the [blog post](http://www.privacypies.org/blog/metadata/2017/02/28/hakuna-metadata-1.html) before trying this tool.
+P.S: Read the [blog post](https://www.privacypies.org/projects/2017/02/28/hakuna-metadata.html) before trying this tool.
 
 
 ## Install instructions
